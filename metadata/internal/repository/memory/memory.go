@@ -19,9 +19,9 @@ func New() *Repository {
 	return &Repository{data: map[string]*model.Metadata{}}
 }
 
-// Get retrieves movie metadata for by movie id.
+// Get retrieves movie metadata by movie id.
 func (r *Repository) Get(_ context.Context, id string) (*model.Metadata, error) {
-	r.RLock()
+	r.Lock()
 	defer r.Unlock()
 
 	m, ok := r.data[id]

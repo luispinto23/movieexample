@@ -7,7 +7,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/go-openapi/errors"
 	consul "github.com/hashicorp/consul/api"
 	"github.com/luispinto23/movieexample/pkg/discovery"
 )
@@ -68,7 +67,7 @@ func (r *Registry) ServiceAddresses(ctx context.Context, serviceName string) ([]
 
 	var res []string
 	for _, e := range entries {
-		res = append(res, fmt.Sprintf("%s,:%d", e.Service.Address, e.Service.Port))
+		res = append(res, fmt.Sprintf("%s:%d", e.Service.Address, e.Service.Port))
 	}
 
 	return res, nil

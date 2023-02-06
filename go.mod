@@ -2,10 +2,7 @@ module github.com/luispinto23/movieexample
 
 go 1.19
 
-require (
-	github.com/go-openapi/errors v0.20.3
-	github.com/hashicorp/consul/api v1.18.0
-)
+require github.com/hashicorp/consul/api v1.18.0
 
 require (
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
@@ -21,4 +18,5 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

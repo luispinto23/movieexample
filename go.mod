@@ -2,7 +2,11 @@ module github.com/luispinto23/movieexample
 
 go 1.19
 
-require github.com/hashicorp/consul/api v1.18.0
+require (
+	github.com/golang/protobuf v1.5.2
+	github.com/hashicorp/consul/api v1.18.0
+	google.golang.org/protobuf v1.28.1
+)
 
 require (
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect

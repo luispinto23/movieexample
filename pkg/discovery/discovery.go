@@ -27,3 +27,4 @@ var ErrNotFound = errors.New("no service addresses found")
 // suffixed by dash and a random number.
 func GenerateInstanceID(serviceName string) string {
 	return fmt.Sprintf("%s-%d", serviceName, rand.New(rand.NewSource(time.Now().UnixNano())).Int())
+}

@@ -22,7 +22,7 @@ func New(ctrl *movie.Controller) *Handler {
 	return &Handler{ctrl: ctrl}
 }
 
-// GetMovieDetails returns moviie details by id.
+// GetMovieDetails returns movie details by id.
 func (h *Handler) GetMovieDetails(ctx context.Context, req *gen.GetMovieDetailsRequest) (*gen.GetMovieDetailsResponse, error) {
 	if req == nil || req.MovieId == "" {
 		return nil, status.Errorf(codes.InvalidArgument, "nil req or empty id")

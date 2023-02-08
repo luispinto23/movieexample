@@ -13,6 +13,15 @@ const (
 	RecordTypeMovie = RecordType("movie")
 )
 
+// RatingEventType defines the type of a rating event.
+type RatingEventType string
+
+// Rating event types.
+const (
+	RatingEventTypePut    = "put"
+	RatingEventTypeDelete = "delete"
+)
+
 // UserID defines a user id.
 type UserID string
 
@@ -25,4 +34,13 @@ type Rating struct {
 	RecordType string      `json:"record_type,omitempty"`
 	UserID     UserID      `json:"user_id,omitempty"`
 	Value      RatingValue `json:"value,omitempty"`
+}
+
+// RatingEvent defines an event containing rating information.
+type RatingEvent struct {
+	UserID     UserID
+	RecordID   RecordID
+	RecordType RecordType
+	Value      RatingValue
+	EventType  RatingEventType
 }
